@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MatInputModule, MatIconModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { InputTextModule } from 'primeng/primeng';
+import { Password } from 'primeng/primeng';
+import { CardModule } from 'primeng/card';
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +14,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     MatInputModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    InputTextModule,
+    Password,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
