@@ -13,6 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.web.reactive.config.ResourceHandlerRegistry;
 import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration;
 
 @Configuration
@@ -24,6 +25,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests()
+			.antMatchers(
+                    "/js/**",
+                    "/css/**",
+                    "/images/**",
+                    "/webjars/**").permitAll()			
 				.antMatchers("/", "/home").permitAll()
 				.anyRequest().authenticated()
 				.and()
@@ -35,6 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.permitAll();
 	}
 
+	
 	@Bean
 	@Override
 	public UserDetailsService userDetailsService() {
@@ -47,4 +54,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 		return new InMemoryUserDetailsManager(user);
 	}
+	
 }
