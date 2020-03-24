@@ -22,6 +22,9 @@ public class Usuario {
 	@Column(name="senha")
 	private String senha;
 	
+	@Column(name="habilitado")
+	private Boolean habilitado;
+	
 	private Date dataCriacao;
 
 	public int getId() {
@@ -55,6 +58,14 @@ public class Usuario {
 	public void setDataCriacao(Date dataCriacao) {
 		this.dataCriacao = dataCriacao;
 	}
-		
+
+	public Boolean getHabilitado() {
+		return habilitado;
+	}
+
+	public void setHabilitado(Boolean habilitado) {
+		this.habilitado = habilitado;
+	}
+			
 	
 }

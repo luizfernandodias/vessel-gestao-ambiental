@@ -5,6 +5,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
+import br.com.vessel.details.UsuarioDetails;
 import br.com.vessel.entity.Usuario;
 import br.com.vessel.repository.UsuarioRepository;
 
@@ -20,6 +21,7 @@ public class UsuarioService implements UserDetailsService{
 		if(usuario == null) {
 			throw new UsernameNotFoundException(username);
 		}
+		return new UsuarioDetails(usuario);
 
 	}
 
