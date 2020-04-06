@@ -1,11 +1,11 @@
-package br.com.vessel.details;
+package br.com.siga.details;
 
 import java.util.Collection;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import br.com.vessel.entity.Usuario;
+import br.com.siga.entity.Usuario;
 
 public class UsuarioDetails implements UserDetails {
 	

@@ -1,4 +1,4 @@
-package br.com.vessel.entity;
+package br.com.siga.entity;
 
 import java.util.Date;
 

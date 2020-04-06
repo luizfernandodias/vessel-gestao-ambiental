@@ -1,4 +1,4 @@
-package br.com.vessel.config;
+package br.com.siga.config;
 
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -30,8 +30,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     "/css/**",
                     "/images/**",
                     "/webjars/**").permitAll()			
-				.antMatchers("/", "/home").permitAll()
-				.anyRequest().authenticated()
+				.anyRequest()
+				.authenticated()
 				.and()
 			.formLogin()
 				.loginPage("/login")
@@ -40,7 +40,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.logout()
 				.permitAll();
 	}
-
 	
 	@Bean
 	@Override

@@ -1,13 +1,13 @@
-package br.com.vessel.service;
+package br.com.sigaservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import br.com.vessel.details.UsuarioDetails;
-import br.com.vessel.entity.Usuario;
-import br.com.vessel.repository.UsuarioRepository;
+import br.com.siga.details.UsuarioDetails;
+import br.com.siga.entity.Usuario;
+import br.com.siga.repository.UsuarioRepository;
 
 public class UsuarioService implements UserDetailsService{
 

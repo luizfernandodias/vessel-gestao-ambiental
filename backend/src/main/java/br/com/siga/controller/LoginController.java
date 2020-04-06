@@ -1,14 +1,14 @@
-package br.com.vessel.controller;
+package br.com.siga.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class HomeController {
+public class LoginController {
 
-	@RequestMapping(value= {"","/","/home"})
+	@RequestMapping	("/login")
 	public ModelAndView home() {
-		return new ModelAndView("home");
+		return new ModelAndView("login");
 	}
 }

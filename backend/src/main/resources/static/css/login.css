@@ -7,6 +7,24 @@ Paleta de cores da aplicação
 #F7F6EE
 #CC968F
 */
-body{
-	background-color: #F7F6EE
+body,html{
+	background-color: #84A295;
+	height: 100%;
+}
+
+.loginContainer{
+	width: 500px;	
+}
+
+.card{
+	height:400px !important;
+}
+
+.card-body{
+	background-color: #F7F7F7;
+	margin:0 auto;
+}
+
+.erro{
+	color: red;
 }
