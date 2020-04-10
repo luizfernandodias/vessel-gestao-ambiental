@@ -19,8 +19,7 @@ public class UsuarioDetails implements UserDetails {
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.usuario.getPapeis();
 	}
 
 	@Override
