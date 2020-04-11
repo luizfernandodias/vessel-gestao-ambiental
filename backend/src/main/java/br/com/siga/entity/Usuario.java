@@ -6,10 +6,14 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
 
 @Entity(name="Usuario")
 public class Usuario {
@@ -19,8 +23,9 @@ public class Usuario {
 	@Column(name="id", updatable = false, nullable = false)
 	private int id;
 	
-	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<UsuarioPapel> papeis;	
+	@ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name="usuarioPapel", joinColumns=@JoinColumn(name="usuarioID"), inverseJoinColumns=@JoinColumn(name="papelID"))
+	private List<Papel> papeis;	
 	
 	@Column(name="usuario", nullable = false, unique = true, length= 75)
 	private String usuario;
@@ -33,7 +38,7 @@ public class Usuario {
 	
 	@Column(name="dataCriacao")
 	private Date dataCriacao;
-
+	
 	public int getId() {
 		return id;
 	}
@@ -42,11 +47,11 @@ public class Usuario {
 		this.id = id;
 	}
 		
-	public List<UsuarioPapel> getPapeis() {
+	public List<Papel> getPapeis() {
 		return papeis;
 	}
 
-	public void setPapeis(List<UsuarioPapel> papeis) {
+	public void setPapeis(List<Papel> papeis) {
 		this.papeis = papeis;
 	}
 

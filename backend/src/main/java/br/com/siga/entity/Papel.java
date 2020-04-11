@@ -2,6 +2,7 @@ package br.com.siga.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -10,10 +11,19 @@ import javax.persistence.ManyToOne;
 
 import org.springframework.security.core.GrantedAuthority;
 
-@Entity(name="UsuarioPapel")
-public class UsuarioPapel implements GrantedAuthority{
+@Entity(name="Papel")
+public class Papel implements GrantedAuthority{
 
 	private static final long serialVersionUID = 1L;
+	
+	public Papel(String nomePapel) {
+		this.nomePapel = nomePapel;		
+	}
+	
+	public Papel()
+	{
+		
+	}
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,10 +32,6 @@ public class UsuarioPapel implements GrantedAuthority{
 	
 	@Column(name="nomePapel", length = 50)
 	private String nomePapel;
-	
-	@ManyToOne
-	@JoinColumn(name = "usuarioId")
-	private Usuario usuario;
 	
 	public int getId() {
 		return id;
