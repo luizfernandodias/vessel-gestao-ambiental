@@ -7,14 +7,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import br.com.siga.entity.Usuario;
 
-public class UsuarioDetails implements UserDetails {
+public class UsuarioDetails extends Usuario implements UserDetails {
 	
 	private static final long serialVersionUID = 1L;
 	private Usuario usuario;
 	
 	public UsuarioDetails(Usuario usuario) {
 		super();
-		this.usuario = usuario;
 	}
 
 	@Override

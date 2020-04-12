@@ -9,6 +9,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.client.registration.ClientRegistration;
+import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -38,15 +40,13 @@ public class Oauth2Configuration {
 
 		@Override
 		public void configure(HttpSecurity httpSecurity) throws Exception {
-			httpSecurity.logout()
-			.invalidateHttpSession(Boolean.TRUE)
-			.clearAuthentication(Boolean.TRUE)
-			.and()
+			httpSecurity
 			.authorizeRequests()
 			.anyRequest()
-			.fullyAuthenticated()
-			.antMatchers(HttpMethod.OPTIONS,"/**")
-			.permitAll();
+			.authenticated()
+			.and()
+			.oauth2Login()
+			.loginPage("/login");
 		}
 
 	}
