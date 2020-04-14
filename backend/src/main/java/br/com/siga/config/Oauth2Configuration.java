@@ -43,6 +43,7 @@ public class Oauth2Configuration {
 			.authenticated()
 			.and()
 			.oauth2Login()
+			.failureUrl("/login")
 			.loginPage("/login");
 		}
 
