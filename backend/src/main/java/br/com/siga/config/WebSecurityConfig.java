@@ -15,7 +15,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
 
 import br.com.siga.service.UsuarioService;
 
@@ -38,29 +37,35 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		return super.authenticationManagerBean();
 	}
 
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+	}	
+
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
-		.authorizeRequests()
-		.antMatchers("/", "/login**", "/error**")
+		.formLogin()
+		.loginPage("/login")
 		.permitAll()
-        .anyRequest()
-        .authenticated()
-        .and()
-        .logout()
-        .logoutUrl("/logout")
-        .logoutSuccessUrl("/")
-        .and()
-        .oauth2Login();
+		.and()
+		.authorizeRequests().
+		anyRequest().
+		authenticated();
 	}
 
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers(HttpMethod.OPTIONS, "/**");
+		web.ignoring().antMatchers(this.getMatchers());
 	}
-
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+	
+	private String [] getMatchers() {
+		return new String [] {
+				"/login",
+				"/css/**",
+				"/js/**",
+				"/images/**"
+		};
+		
 	}
 }
