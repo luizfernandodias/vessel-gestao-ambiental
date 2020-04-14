@@ -21,7 +21,7 @@ import br.com.siga.service.UsuarioService;
 
 @Configuration
 @ComponentScan(basePackages = {"br.com.vessel.controller"})
-@EnableWebSecurity
+@EnableWebSecurity(debug = true)
 @EnableGlobalMethodSecurity(securedEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -41,13 +41,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
-			.formLogin()
-			.loginPage("/login")
-			.permitAll()
-			.and().
-			authorizeRequests().
-			anyRequest().
-			authenticated();
+		.authorizeRequests()
+		.antMatchers("/", "/login**", "/error**")
+		.permitAll()
+        .anyRequest()
+        .authenticated()
+        .and()
+        .logout()
+        .logoutUrl("/logout")
+        .logoutSuccessUrl("/")
+        .and()
+        .oauth2Login();
 	}
 
 	@Override

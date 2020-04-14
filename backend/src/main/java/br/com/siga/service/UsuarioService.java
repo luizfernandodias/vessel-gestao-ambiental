@@ -22,7 +22,7 @@ public class UsuarioService implements UserDetailsService{
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Usuario usuario = this.usuarioRepository.findByUsuario(username);
 		if(usuario == null) {
-			throw new UsernameNotFoundException(String.format("Usuário não encontrado!",username));
+			throw new UsernameNotFoundException(String.format("Usuario nao encontrado",username));
 		}
 		return new UsuarioDetails(usuario);
 	}

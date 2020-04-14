@@ -5,12 +5,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.oauth2.client.registration.ClientRegistration;
-import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -80,11 +77,11 @@ public class Oauth2Configuration {
 		public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 			clients
 			.inMemory()
-			.withClient("client")
+			.withClient("cliente")
 			.authorizedGrantTypes("password", "authorization_code", "refresh_token").scopes("all")
 			.refreshTokenValiditySeconds(300000)
 			.resourceIds(RESOURCE_ID)
-			.secret(passwordEncoder.encode("123"))
+			.secret(passwordEncoder.encode("cliente"))
 			.accessTokenValiditySeconds(50000);
 
 		}

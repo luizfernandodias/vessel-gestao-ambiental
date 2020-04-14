@@ -39,6 +39,22 @@ public class Usuario {
 	@Column(name="dataCriacao")
 	private Date dataCriacao;
 	
+	public Usuario() {
+		
+	}
+	
+	public Usuario(Usuario usuario)
+	{
+		super();
+		this.setDataCriacao(usuario.getDataCriacao());
+		this.setHabilitado(usuario.getHabilitado());
+		this.setUsuario(usuario.getUsuario());
+		this.setSenha(usuario.getSenha());
+		this.setPapeis(usuario.getPapeis());
+		this.setId(usuario.getId());	
+		
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -86,6 +102,6 @@ public class Usuario {
 	public void setHabilitado(Boolean habilitado) {
 		this.habilitado = habilitado;
 	}
-			
+				
 	
 }

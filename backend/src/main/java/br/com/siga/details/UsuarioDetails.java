@@ -10,49 +10,43 @@ import br.com.siga.entity.Usuario;
 public class UsuarioDetails extends Usuario implements UserDetails {
 	
 	private static final long serialVersionUID = 1L;
-	private Usuario usuario;
 	
 	public UsuarioDetails(Usuario usuario) {
-		super();
+		super(usuario);
 	}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return this.usuario.getPapeis();
+		return this.getPapeis();
 	}
 
 	@Override
-	public String getPassword() {
-		return this.usuario.getSenha();
-	}
+    public String getUsername() {
+        return this.getUsuario();
+    }
 
-	@Override
-	public String getUsername() {
-		// TODO Auto-generated method stub
-		return this.usuario.getUsuario();
-	}
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
 
-	@Override
-	public boolean isAccountNonExpired() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
 
-	@Override
-	public boolean isAccountNonLocked() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
 
-	@Override
-	public boolean isCredentialsNonExpired() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
 
-	@Override
-	public boolean isEnabled() {
-		return this.usuario.getHabilitado();
-	}
-
+    @Override
+    public String getPassword() {
+        return  super.getSenha();
+    }
 }

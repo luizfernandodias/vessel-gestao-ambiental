@@ -33,8 +33,8 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 		
 		if(lista != null && lista.isEmpty())
 		{
-			this.criarUsuario("Admin", this.passwordEncoder.encode("admin"),"PAPEL_ADMIN");
-			this.criarUsuario("Cliente",this.passwordEncoder.encode("cliente"),"PAPEL_CLIENTE");
+			this.criarUsuario("admin", this.passwordEncoder.encode("admin"),"PAPEL_ADMIN");
+			this.criarUsuario("cliente",this.passwordEncoder.encode("cliente"),"PAPEL_CLIENTE");
 		}
 		
 	}
