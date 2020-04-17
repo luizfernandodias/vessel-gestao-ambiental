@@ -1,8 +1,8 @@
-<div fxLayout="row" align="center">
-	<mat-card style="width: 400px">
+<div fxLayout="row" align="center" class="container">
+	<mat-card style="width: 450px;height:350px;background-color:#F7F7F7">
 		<div fxLayout="row">
 			<div>
-				<img src="assets/images/logo.png" style="width:400px"/>
+				<img src="assets/images/logo.png" style="width:300px"/>
 			</div>
 			<div>
 				<mat-form-field>
@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<div>
-			<button mat-stroked-button color="primary">Entrar</button>
+			<button mat-stroked-button color="primary" (click)="this.login()">Entrar</button>
 			<button mat-stroked-button color="warn">Esqueci minha senha</button>
 		</div>
 	</mat-card>

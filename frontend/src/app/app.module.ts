@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AutenticacaoModule } from './autenticacao/autenticacao.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -9,9 +10,10 @@ import { AutenticacaoModule } from './autenticacao/autenticacao.module';
   ],
   imports: [
     BrowserModule,
-    AutenticacaoModule
+    AutenticacaoModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
