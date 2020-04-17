@@ -39,6 +39,8 @@ public class Oauth2Configuration {
 		@Override
 		public void configure(HttpSecurity httpSecurity) throws Exception {
 			httpSecurity
+			.cors()
+			.disable()
 			.authorizeRequests()
 			.anyRequest()
 			.authenticated()

@@ -1,25 +1,27 @@
-<div fxLayout="row" align="center" class="container">
-	<mat-card style="width: 450px;height:350px;background-color:#F7F7F7">
-		<div fxLayout="row">
-			<div>
-				<img src="assets/images/logo.png" style="width:300px"/>
+	<div fxLayout="row" align="center" class="container">
+		<form [formGroup]="this.loginForm">
+		<mat-card style="width: 450px;height:350px;background-color:#F7F7F7">
+			<div fxLayout="row">
+				<div>
+					<img src="assets/images/logo.png" style="width:300px"/>
+				</div>
+				<div>
+					<mat-form-field>
+						<mat-label>Usu&aacute;rio</mat-label>
+						<input matInput placeholder="Usu&aacute;rio" type="text" formControlName="username">
+					</mat-form-field>
+				</div>
+				<div>
+					<mat-form-field>
+						<mat-label>Senha</mat-label>
+						<input matInput placeholder="Senha" type="password" formControlName="password">
+					</mat-form-field>
+				</div>
 			</div>
 			<div>
-				<mat-form-field>
-					<mat-label>Usu&aacute;rio</mat-label>
-					<input matInput placeholder="Usu&aacute;rio">
-				</mat-form-field>
+				<button mat-stroked-button color="primary" (click)="this.login()">Entrar</button>
+				<button mat-stroked-button color="warn">Esqueci minha senha</button>
 			</div>
-			<div>
-				<mat-form-field>
-					<mat-label>Senha</mat-label>
-					<input matInput placeholder="Senha" type="password">
-				</mat-form-field>
-			</div>
-		</div>
-		<div>
-			<button mat-stroked-button color="primary" (click)="this.login()">Entrar</button>
-			<button mat-stroked-button color="warn">Esqueci minha senha</button>
-		</div>
-	</mat-card>
-</div>
+		</mat-card>
+		</form>
+	</div>

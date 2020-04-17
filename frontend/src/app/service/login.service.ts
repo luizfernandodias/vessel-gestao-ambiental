@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AbstractService } from './abstract.service';
-import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { HttpHeaders, HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -13,18 +13,17 @@ export class LoginService extends AbstractService{
     super();
    }
 
+
    login(username: string, password: string) {
+    const body = new HttpParams()
+    .set('username', username)
+    .set('password', password)
+    .set('grant_type', 'password');
+
     return this.http.post(
       this.url + '/oauth/token',
-      {
-        username: username,
-        password: password
-      },
-      {
-        headers: this.headers
-      }
-      ).toPromise().then((result) => {
-        console.log(result);
-      });
+      body,
+      {headers: this.headers}
+      );
   }
 }
