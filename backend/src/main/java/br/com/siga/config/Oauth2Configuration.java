@@ -34,6 +34,7 @@ public class Oauth2Configuration {
 		public void configure(ResourceServerSecurityConfigurer resourceServerSecurityConfigurer) {
 			resourceServerSecurityConfigurer.resourceId(RESOURCE_ID);
 		}
+		
 
 		@Override
 		public void configure(HttpSecurity httpSecurity) throws Exception {
@@ -68,6 +69,7 @@ public class Oauth2Configuration {
 		@Override
 		public void configure(AuthorizationServerEndpointsConfigurer endpoints)
 				throws Exception {
+						
 			endpoints
 			.tokenStore(this.tokenStore)
 			.authenticationManager(this.authenticationManager)

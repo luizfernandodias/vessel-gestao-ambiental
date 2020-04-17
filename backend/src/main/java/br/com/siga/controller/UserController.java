@@ -23,12 +23,6 @@ public class UserController {
 
 	@Autowired
 	private UsuarioRepository usuarioRepository;
-
-	@Autowired
-	private PapelRepository papelRepository;
-
-	@Autowired
-	private PasswordEncoder passwordEncoder;
 	
 	@Secured({DominioPapel.ROLE_ADMIN})
     @RequestMapping(value = "", method = RequestMethod.POST)
@@ -49,6 +43,5 @@ public class UserController {
     public List<Usuario> listUser(){
         return this.usuarioRepository.findAll();
     }
-
 
 }

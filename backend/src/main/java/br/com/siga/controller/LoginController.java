@@ -8,8 +8,14 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class LoginController {
 
-	@RequestMapping(value="/login", method=RequestMethod.GET)
+	@RequestMapping(value={"/login"}, method = RequestMethod.GET)
 	public ModelAndView home() {
-		return new ModelAndView("login");
+		ModelAndView modelAndView = new ModelAndView("login");
+		return modelAndView;
+	}
+	
+	@RequestMapping(value= {"/"}, method = RequestMethod.GET)
+	public ModelAndView main(){
+		return new ModelAndView("redirect:/login");
 	}
 }
