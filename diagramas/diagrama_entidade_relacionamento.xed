@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?><Diagram version="1.0" type="MySQL" versionMajor="8" versionMinor="0" groupSchema="false" hide_inv="false">
+<Table id="0" name="Pessoa" schema="" database="" background="16777215">
+<Column id="1" name="id" type="long" length="25" nulls="true"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="transferTable" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="External" value="false"/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="2" name="PessoaFisica" schema="" database="" background="16777215">
+<Column id="3" name="id" type="long" length="25" nulls="true"/>
+<Column id="4" name="pessoaId" type="long" length="25" nulls="true"/>
+<Column id="5" name="nome" type="varchar" length="200" nulls="true"/>
+<Column id="6" name="dataNascimento" type="varchar" length="25" nulls="true"/>
+<Column id="7" name="CPF" type="varchar" length="20" nulls="true"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="transferTable" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="External" value="false"/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="8" name="PessoaJuridica" schema="" database="" background="16777215">
+<Column id="9" name="id" type="long" length="25" nulls="true"/>
+<Column id="10" name="pessoaId" type="long" length="25" nulls="true"/>
+<Column id="11" name="razaoSocial" type="varchar" length="200" nulls="true"/>
+<Column id="12" name="cnpj" type="varchar" length="25" nulls="true"/>
+<Column id="13" name="nomeFantasia" type="varchar" length="200" nulls="true"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="transferTable" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="External" value="false"/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="14" name="Usuario" schema="" database="" background="16777215">
+<Column id="15" name="id" type="long" length="25" nulls="true"/>
+<Column id="16" name="username" type="varchar" length="50" nulls="true"/>
+<Column id="17" name="password" type="varchar" length="50" nulls="true"/>
+<Column id="18" name="pessoaFisicaId" type="long" length="25" nulls="true"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="transferTable" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="External" value="false"/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="19" name="Licenca" schema="" database="" background="16777215">
+<Column id="20" name="id" type="long" length="25" nulls="true"/>
+<Column id="21" name="pessoaJuridicaId" type="long" length="25" nulls="true"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="transferTable" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="External" value="false"/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="22" name="TipoLicenca" schema="" database="" background="16777215">
+<Column id="23" name="id" type="long" length="25" nulls="true"/>
+<Column id="24" name="descricao" type="varchar" length="200" nulls="true"/>
+<Column id="25" name="ativo" type="bit" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="transferTable" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="External" value="false"/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="26" name="HistoricoLicenca" schema="" database="" background="16777215">
+<Column id="27" name="id" type="long" length="25" nulls="true"/>
+<Column id="28" name="LicencaId" type="varchar" length="25" nulls="true"/>
+<Column id="29" name="usuarioId" type="varchar" length="25" nulls="true"/>
+<Column id="30" name="tipoLicencaId" type="long" length="25" nulls="true"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="transferTable" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="External" value="false"/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="31" name="Telefone" schema="" database="" background="16777215">
+<Column id="32" name="id" type="long" length="25" nulls="true"/>
+<Column id="33" name="ddi" type="varchar" length="3" nulls="true"/>
+<Column id="34" name="ddd" type="varchar" length="3" nulls="true"/>
+<Column id="35" name="numero" type="varchar" length="15" nulls="true"/>
+<Column id="36" name="ativo" type="bit" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="37" name="pessoaId" type="long" length="25" nulls="true"/>
+<Column id="38" name="tipoTelefoneId" type="long" length="25" nulls="true"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="transferTable" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="External" value="false"/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="39" name="Email" schema="" database="" background="16777215">
+<Column id="40" name="id" type="long" length="25" nulls="true"/>
+<Column id="41" name="endereco" type="varchar" length="200" nulls="true"/>
+<Column id="42" name="ativo" type="bit" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="43" name="pessoaId" type="long" length="25" nulls="true"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="transferTable" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="External" value="false"/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="44" name="Condicionante" schema="" database="" background="16777215">
+<Column id="45" name="id" type="long" length="25" nulls="true"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="transferTable" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="External" value="false"/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="46" name="HistoricoCondicionante" schema="" database="" background="16777215">
+<Column id="47" name="id" type="long" length="25" nulls="true"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="transferTable" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="External" value="false"/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="48" name="TipoCondicionante" schema="" database="" background="16777215">
+<Column id="49" name="id" type="long" length="25" nulls="true"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="transferTable" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="External" value="false"/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="50" name="TipoTelefone" schema="" database="" background="16777215">
+<Column id="51" name="id" type="long" length="25" nulls="true"/>
+<Column id="52" name="descricao" type="varchar" length="25" nulls="true"/>
+<Column id="53" name="ativo" type="bit" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="transferTable" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="External" value="false"/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="54" name="Endereco" schema="" database="" background="16777165">
+<Column id="55" name="id" type="long" length="25" nulls="true"/>
+<Column id="56" name="pessoaId" type="long" length="25" nulls="true"/>
+<Column id="57" name="endereco" type="varchar" length="300" nulls="true"/>
+<Column id="58" name="cep" type="varchar" length="12" nulls="true"/>
+<Column id="59" name="cidadeId" type="long" length="25" nulls="true"/>
+<Column id="60" name="estadoId" type="long" length="25" nulls="true"/>
+<Column id="61" name="paisId" type="long" length="25" nulls="true"/>
+<Storage name="ValueCompression" value="false"/>
+<Storage name="DistributeRandom" value="false"/>
+<Storage name="NoLogging" value="false"/>
+<Storage name="WithCRCols" value="false"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="transferTable" value="false"/>
+<Storage name="db2zVolatile" value="false"/>
+<Storage name="db2zRestrictOnDrop" value="false"/>
+<Storage name="AppendMode" value="false"/>
+<Storage name="External" value="false"/>
+<Storage name="Engine" value=""/>
+</Table>
+<Relation id="62" name="1,1" cardinality="1" identifying="false" nulls="false">
+<FK>1</FK>
+<PK>4</PK>
+<Text/>
+</Relation>
+<Relation id="63" name="1,1" cardinality="1" identifying="false" nulls="false">
+<FK>1</FK>
+<PK>10</PK>
+<Text/>
+</Relation>
+<Relation id="64" name="1,1" cardinality="-2" identifying="false" nulls="false">
+<FK>1</FK>
+<PK>18</PK>
+<Text/>
+</Relation>
+<Relation id="65" name="1,*" cardinality="-2" identifying="false" nulls="false">
+<FK>1</FK>
+<PK>37</PK>
+<Text/>
+</Relation>
+<Relation id="66" name="1,*" cardinality="-2" identifying="false" nulls="false">
+<FK>1</FK>
+<PK>43</PK>
+<Text/>
+</Relation>
+<Relation id="67" name="1,*" cardinality="-2" identifying="false" nulls="false">
+<FK>9</FK>
+<PK>21</PK>
+<Text/>
+</Relation>
+<Relation id="68" name="1,*" cardinality="-2" identifying="false" nulls="false">
+<FK>15</FK>
+<PK>29</PK>
+<Text/>
+</Relation>
+<Relation id="69" name="1,1" cardinality="1" identifying="false" nulls="false">
+<FK>30</FK>
+<PK>23</PK>
+<Text/>
+</Relation>
+<Relation id="70" name="1,1" cardinality="1" identifying="false" nulls="false">
+<FK>51</FK>
+<PK>38</PK>
+<Text/>
+</Relation>
+<Constraint table="0" name="PK_Pessoa_1" type="PrimKey">
+<ConstraintColumn id="1"/>
+</Constraint>
+<Constraint table="2" name="PK_PessoaFisica_1" type="PrimKey">
+<ConstraintColumn id="3"/>
+</Constraint>
+<Constraint table="8" name="PK_PessoaJuridica_1" type="PrimKey">
+<ConstraintColumn id="9"/>
+</Constraint>
+<Constraint table="14" name="PK_Usuario_1" type="PrimKey">
+<ConstraintColumn id="15"/>
+</Constraint>
+<Constraint table="19" name="PK_Licenca_1" type="PrimKey">
+<ConstraintColumn id="20"/>
+</Constraint>
+<Constraint table="22" name="PK_TipoLicenca_1" type="PrimKey">
+<ConstraintColumn id="23"/>
+</Constraint>
+<Constraint table="26" name="PK_HistoricoLicenca_1" type="PrimKey">
+<ConstraintColumn id="27"/>
+</Constraint>
+<Constraint table="31" name="PK_Telefone_1" type="PrimKey">
+<ConstraintColumn id="32"/>
+</Constraint>
+<Constraint table="39" name="PK_Email_1" type="PrimKey">
+<ConstraintColumn id="40"/>
+</Constraint>
+<Constraint table="50" name="PK_TipoTelefone_1" type="PrimKey">
+<ConstraintColumn id="51"/>
+</Constraint>
+<Sheet name="Sem Título 1" id="71" disp_at="true" disp_ph="true" disp_co="true" disp_rn="true">
+<Place id="14" visible="true">429,519,170,100</Place>
+<Place id="65" visible="true">500,0,0,0</Place>
+<Place id="69" visible="true">500,0,0,0</Place>
+<Place id="26" visible="true">949,220,162,101</Place>
+<Place id="67" visible="true" options="410.0474433315761,80.0,231.0,111.0,1148.86964379848,70.34189321485051,152.0,61.0,2,641.0474433315761,100.0,1148.86964379848,100.0">500,0,0,0</Place>
+<Place id="22" visible="true">1138,441,171,80</Place>
+<Place id="63" visible="true" options="449.65810678514947,330.7312297612772,120.0,60.0,410.0474433315761,80.0,231.0,111.0,2,510.0,330.7312297612772,510.0,191.0">500,0,0,0</Place>
+<Place id="64" visible="true" options="449.65810678514947,330.7312297612772,120.0,60.0,429.30642367648136,519.7055501167256,170.0,100.0,2,520.0,391.0,520.0,519.7055501167256">500,0,0,0</Place>
+<Place id="0" visible="true">449,330,120,60</Place>
+<Place id="44" visible="true">1448,98,120,60</Place>
+<Place id="62" visible="true" options="449.65810678514947,330.7312297612772,120.0,60.0,190.0,330.0,171.0,111.0,4,449.65810678514947,360.0,449.65810678514947,355.0,361.0,355.0,361.0,350.0">500,0,0,0</Place>
+<Place id="70" visible="true">500,0,0,0</Place>
+<Place id="54" visible="true">740,589,200,171</Place>
+<Place id="2" visible="true">190,330,171,111</Place>
+<Place id="31" visible="true">630,371,192,140</Place>
+<Place id="50" visible="true">888,420,120,101</Place>
+<Place id="46" visible="true">1442,269,120,60</Place>
+<Place id="48" visible="true">1460,440,120,60</Place>
+<Place id="39" visible="true">709,219,190,101</Place>
+<Place id="68" visible="true" options="429.30642367648136,519.7055501167256,170.0,100.0,949.0692070186009,220.0,162.0,101.0,3,599.0,570.0,1030.0,570.0,1030.0,321.0">500,0,0,0</Place>
+<Place id="8" visible="true">410,80,231,111</Place>
+<Place id="66" visible="true" options="449.65810678514947,330.7312297612772,120.0,60.0,709.9525566684239,219.75299344830182,190.0,101.0,4,570.0,350.0,640.0,350.0,640.0,310.0,709.9525566684239,310.0">500,0,0,0</Place>
+<Place id="19" visible="true">1148,70,152,61</Place>
+</Sheet>
+<Settings sheet="71" zoom="0.9318596491228069"/>
+</Diagram>
