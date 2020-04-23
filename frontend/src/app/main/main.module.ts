@@ -3,24 +3,29 @@ import { CommonModule } from '@angular/common';
 import { CreateUsuarioComponent } from './create-usuario/create-usuario.component';
 import { MainRouterModule } from './main-router.module';
 import { RouterModule } from '@angular/router';
+import { MenuComponent } from './menu/menu.component';
+import { MatSidenavModule } from '@angular/material';
 
 
 
 
 @NgModule({
-  declarations: [ 
-    CreateUsuarioComponent
+  declarations: [
+    CreateUsuarioComponent,
+    MenuComponent
   ],
   imports: [
     CommonModule,
     MainRouterModule,
-    RouterModule
+    RouterModule,
+    MatSidenavModule
   ],
   providers: [
     MainRouterModule
   ],
   exports: [
-    CreateUsuarioComponent
+    CreateUsuarioComponent,
+    MenuComponent
   ]
 })
 export class MainModule { }
