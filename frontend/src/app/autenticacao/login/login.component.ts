@@ -30,19 +30,16 @@ export class LoginComponent implements OnInit {
 
   }
 
-  login(){
+  login() {
     return this.loginService.login(
       this.loginForm.get('username').value,
       this.loginForm.get('password').value
     ).toPromise().then((result) => {
-  
       this.storage.storeOnLocalStorage('access_token', result['access_token']);
       this.storage.storeOnLocalStorage('token_type', result['token_type']);
       this.storage.storeOnLocalStorage('refresh_token', result['refresh_token']);
-      
-      console.log(this.router);
-      this.router.navigate(['main','create-usuario']);
-
+     
+      this.router.navigate(['main', 'create-usuario']);
 
     }).catch((error) => {
         this.snackBar.open('Usuario ou senha incorretos', 'error', {

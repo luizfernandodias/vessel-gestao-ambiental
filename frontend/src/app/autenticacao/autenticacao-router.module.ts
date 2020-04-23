@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { CreateUsuarioComponent } from '../main/create-usuario/create-usuario.component';
+import { LoginComponent } from './login/login.component';
 
 
 export const routes: Routes = [{
-  path: 'main',
+  path: 'autenticacao',
   children: [{
-  path: 'create-usuario', component: CreateUsuarioComponent
+    path: 'login',
+    component: LoginComponent
   }]
 }]
 

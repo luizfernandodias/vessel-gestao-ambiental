@@ -20,11 +20,14 @@ import { AutenticacaoRouterModule } from './autenticacao-router.module';
     MatButtonModule,
     MatSnackBarModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AutenticacaoRouterModule
+  ],
+  providers: [
+    AutenticacaoRouterModule
   ],
   exports: [
     LoginComponent
-  ],
-  providers: [AutenticacaoRouterModule]
+  ]
 })
 export class AutenticacaoModule { }

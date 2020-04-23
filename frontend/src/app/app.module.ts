@@ -6,19 +6,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
 import { StorageServiceModule } from 'angular-webstorage-service';
 import { AppRouterModule } from './app-router.module';
-import { CreateUsuarioComponent } from './main/create-usuario/create-usuario.component';
+import { MainModule } from './main/main.module';
+import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CreateUsuarioComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AutenticacaoModule,
     HttpClientModule,
     StorageServiceModule,
+    MainModule,
+    RouterModule,
     AppRouterModule
   ],
   providers: [
