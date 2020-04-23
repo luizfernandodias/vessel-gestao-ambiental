@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AutenticacaoRouterModule } from './autenticacao-router.module';
 
 
 @NgModule({
@@ -24,6 +25,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   exports: [
     LoginComponent
   ],
-  providers: []
+  providers: [AutenticacaoRouterModule]
 })
 export class AutenticacaoModule { }
