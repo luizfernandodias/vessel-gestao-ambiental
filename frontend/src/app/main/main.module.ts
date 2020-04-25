@@ -4,10 +4,8 @@ import { CreateUsuarioComponent } from './create-usuario/create-usuario.componen
 import { MainRouterModule } from './main-router.module';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
-import { MatSidenavModule } from '@angular/material';
-
-
-
+import { MatSidenavModule, MatToolbarModule, MatIconModule, MatCheckboxModule, MatMenuModule} from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +16,12 @@ import { MatSidenavModule } from '@angular/material';
     CommonModule,
     MainRouterModule,
     RouterModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCheckboxModule,
+    FormsModule,
+    MatMenuModule
   ],
   providers: [
     MainRouterModule

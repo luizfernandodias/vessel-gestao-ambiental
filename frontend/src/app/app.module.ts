@@ -8,7 +8,8 @@ import { StorageServiceModule } from 'angular-webstorage-service';
 import { AppRouterModule } from './app-router.module';
 import { MainModule } from './main/main.module';
 import { RouterModule } from '@angular/router';
-
+import { MatIconModule, MatToolbarModule, MatMenuModule, MatButtonModule } from '@angular/material';
+import { FlexModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -22,7 +23,12 @@ import { RouterModule } from '@angular/router';
     StorageServiceModule,
     MainModule,
     RouterModule,
-    AppRouterModule
+    AppRouterModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatButtonModule,
+    FlexModule
   ],
   providers: [
     HttpClientModule,

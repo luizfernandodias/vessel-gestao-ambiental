@@ -11,6 +11,14 @@
       "port": 9287,
       "webRoot": "${workspaceFolder}",
       "url": "http://localhost:4200/#"
+    },
+    {
+      "name": "Launch Chrome siga-frontend on Angular CLI Server (1)",
+      "type": "chrome",
+      "request": "launch",
+      "port": 9231,
+      "webRoot": "${workspaceFolder}",
+      "url": "http://localhost:4201/#"
     }
   ]
 }
