@@ -9,7 +9,6 @@ import { AppRouterModule } from './app-router.module';
 import { MainModule } from './main/main.module';
 import { RouterModule } from '@angular/router';
 import { MatIconModule, MatToolbarModule, MatMenuModule, MatButtonModule } from '@angular/material';
-import { FlexModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -27,8 +26,7 @@ import { FlexModule } from '@angular/flex-layout';
     MatIconModule,
     MatToolbarModule,
     MatMenuModule,
-    MatButtonModule,
-    FlexModule
+    MatButtonModule
   ],
   providers: [
     HttpClientModule,
