@@ -21,6 +21,14 @@ public class Pessoa {
 	@OneToMany
 	@JoinColumn(name="pessoaId")
 	private List<Email> emails;
+	
+	@OneToMany
+	@JoinColumn(name="pessoaId")
+	private List<Telefone> telefones;
+	
+	@OneToMany
+	@JoinColumn(name="pessoaID")
+	private List<Endereco> enderecos;
 
 	public Integer getId() {
 		return id;
@@ -37,5 +45,23 @@ public class Pessoa {
 	public void setEmails(List<Email> emails) {
 		this.emails = emails;
 	}
+
+	public List<Telefone> getTelefones() {
+		return telefones;
+	}
+
+	public void setTelefones(List<Telefone> telefones) {
+		this.telefones = telefones;
+	}
+
+	public List<Endereco> getEnderecos() {
+		return enderecos;
+	}
+
+	public void setEnderecos(List<Endereco> enderecos) {
+		this.enderecos = enderecos;
+	}
+	
+	
 	
 }
