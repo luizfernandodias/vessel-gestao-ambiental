@@ -9,6 +9,7 @@ import { AppRouterModule } from './app-router.module';
 import { MainModule } from './main/main.module';
 import { RouterModule } from '@angular/router';
 import { MatIconModule, MatToolbarModule, MatMenuModule, MatButtonModule } from '@angular/material';
+import { OAuthService, UrlHelperService, OAuthLogger, OAuthModule } from 'angular-oauth2-oidc';
 
 
 @NgModule({
@@ -26,12 +27,15 @@ import { MatIconModule, MatToolbarModule, MatMenuModule, MatButtonModule } from 
     MatIconModule,
     MatToolbarModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    OAuthModule.forRoot()
   ],
   providers: [
     HttpClientModule,
     FormBuilder,
-    Storage
+    Storage,
+    OAuthService,
+    UrlHelperService
   ],
   exports: [
   ],

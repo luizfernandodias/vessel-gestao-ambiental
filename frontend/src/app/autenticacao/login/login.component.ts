@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { StorageService } from 'src/app/service/storage.service';
 import { Router } from '@angular/router';
+import { OAuthService } from 'angular-oauth2-oidc';
 
 
 @Component({
@@ -19,6 +20,7 @@ export class LoginComponent implements OnInit {
   })
 
   constructor(
+    private oauthService: OAuthService,
     private loginService: LoginService,
     private formBuilder: FormBuilder,
     private snackBar: MatSnackBar,
