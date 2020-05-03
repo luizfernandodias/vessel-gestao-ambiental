@@ -11,9 +11,7 @@ export class AppComponent {
   title = 'siga-frontend';
 
   public async configureAuth(): Promise<any> {
-    this.oauthService.configure({
-      client
-    });
+
   }
 
   public constructor(private oauthService: OAuthService) {
