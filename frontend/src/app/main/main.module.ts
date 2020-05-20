@@ -4,7 +4,16 @@ import { CreateUsuarioComponent } from './create-usuario/create-usuario.componen
 import { MainRouterModule } from './main-router.module';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
-import { MatSidenavModule, MatToolbarModule, MatIconModule, MatCheckboxModule, MatMenuModule} from '@angular/material';
+import { MatSidenavModule,
+         MatToolbarModule,
+         MatIconModule, 
+         MatCheckboxModule,
+         MatMenuModule,
+         MatCardModule,
+         MatSelectModule,
+         MatInputModule,
+         MatFormFieldModule
+        } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -20,6 +29,10 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatIconModule,
     MatCheckboxModule,
+    MatCardModule,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule,
     FormsModule,
     MatMenuModule
   ],
