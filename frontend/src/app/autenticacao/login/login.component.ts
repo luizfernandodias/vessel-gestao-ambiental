@@ -50,4 +50,8 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  recuperarSenha() {
+    this.router.navigate(['autenticacao' ,'recuperacao-senha']);
+  }
+
 }

@@ -10,6 +10,7 @@ import { MainModule } from './main/main.module';
 import { RouterModule } from '@angular/router';
 import { MatIconModule, MatToolbarModule, MatMenuModule, MatButtonModule } from '@angular/material';
 import { OAuthService, UrlHelperService, OAuthLogger, OAuthModule } from 'angular-oauth2-oidc';
+import { RecuperacaoSenhaComponent } from './autenticacao/recuperacao-senha/recuperacao-senha.component';
 
 
 @NgModule({

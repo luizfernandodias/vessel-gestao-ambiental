@@ -8,10 +8,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AutenticacaoRouterModule } from './autenticacao-router.module';
+import { RecuperacaoSenhaComponent } from './recuperacao-senha/recuperacao-senha.component';
+import { MatFormFieldModule } from '@angular/material';
 
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, RecuperacaoSenhaComponent],
   imports: [
     CommonModule,
     MatCardModule,
@@ -21,13 +23,15 @@ import { AutenticacaoRouterModule } from './autenticacao-router.module';
     MatSnackBarModule,
     FormsModule,
     ReactiveFormsModule,
-    AutenticacaoRouterModule
+    AutenticacaoRouterModule,
+    MatFormFieldModule
   ],
   providers: [
     AutenticacaoRouterModule
   ],
   exports: [
-    LoginComponent
+    LoginComponent,
+    RecuperacaoSenhaComponent
   ]
 })
 export class AutenticacaoModule { }

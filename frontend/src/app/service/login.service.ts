@@ -26,4 +26,15 @@ export class LoginService extends AbstractService{
       {headers: this.headers}
       );
   }
+
+  recuperacaoSenha(email: string) {
+    const body = new HttpParams()
+    .set('email', email);
+    
+    return this.http.post(
+      this.url + '/oauth/token',
+      body,
+      {headers: this.headers}
+    )
+  }
 }

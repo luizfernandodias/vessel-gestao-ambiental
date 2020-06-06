@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
+import { RecuperacaoSenhaComponent } from './recuperacao-senha/recuperacao-senha.component';
 
 
 export const routes: Routes = [{
@@ -9,6 +10,9 @@ export const routes: Routes = [{
   children: [{
     path: 'login',
     component: LoginComponent
+  },{
+    path: 'recuperacao-senha',
+    component: RecuperacaoSenhaComponent
   }]
 }]
 
