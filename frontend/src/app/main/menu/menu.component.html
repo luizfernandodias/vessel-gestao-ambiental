@@ -4,26 +4,26 @@
       menu
     </mat-icon>
     <img src="assets/images/logo_menu.png">
-    <button mat-button [matMenuTriggerFor]="licenca" mat-menu-item>
+    <button [matMenuTriggerFor]="licenca" mat-menu-item>
       Licen&ccedil;a Ambiental
     </button>
     <mat-menu #menu="matMenu" #licenca>
-      <button mat-menu-item>Cadastrar Licen&ccedil;a</button>
+      <button mat-menu-item (click)="this.cadastrarLicenca()">Cadastrar Licen&ccedil;a</button>
       <button mat-menu-item>Listar Licen&ccedil;a</button>
     </mat-menu>
-    <button mat-button [matMenuTriggerFor]="administrativo" mat-menu-item>
+    <button [matMenuTriggerFor]="administrativo" mat-menu-item>
       Administrativo
     </button>
     <mat-menu #menu="matMenu" #administrativo>
       <button mat-menu-item>Cadastrar Usu&aacute;rio</button>
       <button mat-menu-item>Listar Usu&aacute;rio</button>
     </mat-menu>
-    <button mat-button [matMenuTriggerFor]="condicionante" mat-menu-item>Condicionantes</button>
+    <button [matMenuTriggerFor]="condicionante" mat-menu-item>Condicionantes</button>
     <mat-menu #menu="matMenu" #condicionante>
       <button mat-menu-item>Cadastrar Condicionante</button>
       <button mat-menu-item>Listar Condicionante</button>
     </mat-menu>
-    <button mat-button [matMenuTriggerFor]="ajuda" mat-menu-item>
+    <button [matMenuTriggerFor]="ajuda" mat-menu-item>
       Ajuda
     </button>
     <mat-menu #menu="matMenu" #ajuda>

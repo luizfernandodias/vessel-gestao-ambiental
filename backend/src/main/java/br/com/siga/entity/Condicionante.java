@@ -59,6 +59,5 @@ public class Condicionante {
 		this.tipoCondicionante = tipoCondicionante;
 	}
 	
-	
-	
+		
 }

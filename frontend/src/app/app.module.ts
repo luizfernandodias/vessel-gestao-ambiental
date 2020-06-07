@@ -8,10 +8,8 @@ import { StorageServiceModule } from 'angular-webstorage-service';
 import { AppRouterModule } from './app-router.module';
 import { MainModule } from './main/main.module';
 import { RouterModule } from '@angular/router';
-import { MatIconModule, MatToolbarModule, MatMenuModule, MatButtonModule } from '@angular/material';
+import { MatIconModule, MatToolbarModule, MatMenuModule } from '@angular/material';
 import { OAuthService, UrlHelperService, OAuthLogger, OAuthModule } from 'angular-oauth2-oidc';
-import { RecuperacaoSenhaComponent } from './autenticacao/recuperacao-senha/recuperacao-senha.component';
-
 
 @NgModule({
   declarations: [
@@ -28,7 +26,6 @@ import { RecuperacaoSenhaComponent } from './autenticacao/recuperacao-senha/recu
     MatIconModule,
     MatToolbarModule,
     MatMenuModule,
-    MatButtonModule,
     OAuthModule.forRoot()
   ],
   providers: [

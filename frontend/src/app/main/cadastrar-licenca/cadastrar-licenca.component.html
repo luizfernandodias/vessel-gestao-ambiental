@@ -1,0 +1,89 @@
+<app-menu>    
+</app-menu>
+<div class="container">
+    <mat-card class="box">
+        <div fxLayout="row" style="align:center">
+            <h3>Cadastrar Licen&ccedil;a</h3>
+            <div>
+            <mat-form-field style="width: 90%;">
+                <mat-label>Nome do empreedimento</mat-label>
+                <input matInput placeholder="Nome do empreendimento" value="">
+            </mat-form-field>
+            </div>
+            <div>
+            <mat-form-field style="width: 90%;"> 
+            <mat-label>Data de validade</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field style="width: 90%;">
+                    <mat-label>Emitente</mat-label>
+                    <input matInput placeholder="Emitente" value="">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field style="width: 90%;">
+                    <mat-label>Bairro</mat-label>
+                    <input matInput placeholder="Bairro" value="">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field style="width: 90%;">
+                    <mat-label>Cidade</mat-label>
+                    <input matInput placeholder="Cidade" value="">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field style="width: 90%">
+                    <mat-label>UF</mat-label>
+                    <mat-select>
+                        <mat-option value="AC">AC</mat-option>
+                        <mat-option value="AL">AL</mat-option>
+                        <mat-option value="AM">AM</mat-option>
+                        <mat-option value="AP">AP</mat-option>
+                        <mat-option value="BA">BA</mat-option>
+                        <mat-option value="CE">CE</mat-option>
+                        <mat-option value="DF">DF</mat-option>
+                        <mat-option value="ES">ES</mat-option>
+                        <mat-option value="GO">GO</mat-option>
+                        <mat-option value="MA">MA</mat-option>
+                        <mat-option value="MG">MG</mat-option>
+                        <mat-option value="MS">MS</mat-option>
+                        <mat-option value="MT">MT</mat-option>
+                        <mat-option value="PA">PA</mat-option>
+                        <mat-option value="PB">PB</mat-option>
+                        <mat-option value="PE">PE</mat-option>
+                        <mat-option value="PI">PI</mat-option>
+                        <mat-option value="PR">PR</mat-option>
+                        <mat-option value="RJ">RJ</mat-option>
+                        <mat-option value="RN">RN</mat-option>
+                        <mat-option value="RO">RO</mat-option>
+                        <mat-option value="RR">RR</mat-option>
+                        <mat-option value="RS">RS</mat-option>
+                        <mat-option value="SC">SC</mat-option>
+                        <mat-option value="SE">SE</mat-option>
+                        <mat-option value="SP">SP</mat-option>
+                        <mat-option value="TO">TO</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field style="width: 90%;">
+                    <mat-label>Atividade Principal</mat-label>
+                    <input matInput placeholder="Atividade Principal" value="">
+                </mat-form-field>
+            </div>
+            <div style="width:90%">
+                <ckeditor [editor]="this.editor" data="conteúdo da licença" style="width:70%"></ckeditor>
+            </div>
+            <div>
+                <div>
+                    <button mat-raised-button color="accent">Cadastrar</button>
+                </div>
+            </div>
+          </div>
+        </mat-card>
+    </div>

@@ -4,7 +4,6 @@ import { LoginComponent } from './login/login.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AutenticacaoRouterModule } from './autenticacao-router.module';
@@ -13,13 +12,13 @@ import { MatFormFieldModule } from '@angular/material';
 
 
 @NgModule({
-  declarations: [LoginComponent, RecuperacaoSenhaComponent],
+  declarations: [LoginComponent,
+    RecuperacaoSenhaComponent],
   imports: [
     CommonModule,
     MatCardModule,
     MatInputModule,
     BrowserAnimationsModule,
-    MatButtonModule,
     MatSnackBarModule,
     FormsModule,
     ReactiveFormsModule,

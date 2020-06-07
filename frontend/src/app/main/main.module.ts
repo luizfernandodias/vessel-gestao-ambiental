@@ -12,14 +12,21 @@ import { MatSidenavModule,
          MatCardModule,
          MatSelectModule,
          MatInputModule,
-         MatFormFieldModule
+         MatFormFieldModule,
+         MatDatepickerModule,
+         MatNativeDateModule,
+         MatButtonModule
         } from '@angular/material';
 import { FormsModule } from '@angular/forms';
+import { CadastrarLicencaComponent } from './cadastrar-licenca/cadastrar-licenca.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 @NgModule({
   declarations: [
     CreateUsuarioComponent,
-    MenuComponent
+    MenuComponent,
+    CadastrarLicencaComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +41,13 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonModule,
+    CKEditorModule
   ],
   providers: [
     MainRouterModule
