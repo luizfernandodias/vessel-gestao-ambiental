@@ -8,7 +8,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AutenticacaoRouterModule } from './autenticacao-router.module';
 import { RecuperacaoSenhaComponent } from './recuperacao-senha/recuperacao-senha.component';
-import { MatFormFieldModule } from '@angular/material';
+import { MatFormFieldModule, MatButtonModule } from '@angular/material';
 
 
 @NgModule({
@@ -23,7 +23,8 @@ import { MatFormFieldModule } from '@angular/material';
     FormsModule,
     ReactiveFormsModule,
     AutenticacaoRouterModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatButtonModule
   ],
   providers: [
     AutenticacaoRouterModule

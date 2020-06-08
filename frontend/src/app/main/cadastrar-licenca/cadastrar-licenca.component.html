@@ -1,5 +1,6 @@
 <app-menu>    
 </app-menu>
+<form [formGroup]="this.licencaForm">
 <div class="container">
     <mat-card class="box">
         <div fxLayout="row" style="align:center">
@@ -7,7 +8,7 @@
             <div>
             <mat-form-field style="width: 90%;">
                 <mat-label>Nome do empreedimento</mat-label>
-                <input matInput placeholder="Nome do empreendimento" value="">
+                <input matInput [formControlName]="nomeEmpreendimento" placeholder="Nome do empreendimento" value="">
             </mat-form-field>
             </div>
             <div>
@@ -21,25 +22,25 @@
             <div>
                 <mat-form-field style="width: 90%;">
                     <mat-label>Emitente</mat-label>
-                    <input matInput placeholder="Emitente" value="">
+                    <input matInput [formControlName]="emitente" placeholder="Emitente" value="">
                 </mat-form-field>
             </div>
             <div>
                 <mat-form-field style="width: 90%;">
                     <mat-label>Bairro</mat-label>
-                    <input matInput placeholder="Bairro" value="">
+                    <input matInput placeholder="Bairro" [formControlName]="bairro" value="">
                 </mat-form-field>
             </div>
             <div>
                 <mat-form-field style="width: 90%;">
                     <mat-label>Cidade</mat-label>
-                    <input matInput placeholder="Cidade" value="">
+                    <input matInput placeholder="Cidade" [formControlName]="cidade" value="">
                 </mat-form-field>
             </div>
             <div>
                 <mat-form-field style="width: 90%">
                     <mat-label>UF</mat-label>
-                    <mat-select>
+                    <mat-select [formControlName]="UF">
                         <mat-option value="AC">AC</mat-option>
                         <mat-option value="AL">AL</mat-option>
                         <mat-option value="AM">AM</mat-option>
@@ -73,17 +74,16 @@
             <div>
                 <mat-form-field style="width: 90%;">
                     <mat-label>Atividade Principal</mat-label>
-                    <input matInput placeholder="Atividade Principal" value="">
+                    <input matInput placeholder="Atividade Principal" [formControlName]="atividadePrincipal" value="">
                 </mat-form-field>
             </div>
             <div style="width:90%">
-                <ckeditor [editor]="this.editor" data="conteúdo da licença" style="width:70%"></ckeditor>
-            </div>
-            <div>
-                <div>
-                    <button mat-raised-button color="accent">Cadastrar</button>
-                </div>
-            </div>
-          </div>
-        </mat-card>
-    </div>
+                <ckeditor [editor]="this.editor" [config]="this.config" data="" style="width:70%"></ckeditor>
+           </div>
+           <div>
+                <button mat-stroked-button color="Primary" (click)="this.salvar()">Salvar</button>
+           </div>
+        </div>
+    </mat-card>
+</div>
+</form>

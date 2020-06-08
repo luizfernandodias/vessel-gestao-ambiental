@@ -17,7 +17,7 @@ import { MatSidenavModule,
          MatNativeDateModule,
          MatButtonModule
         } from '@angular/material';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CadastrarLicencaComponent } from './cadastrar-licenca/cadastrar-licenca.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
@@ -31,6 +31,8 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
   imports: [
     CommonModule,
     MainRouterModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule,
     MatSidenavModule,
     MatToolbarModule,
