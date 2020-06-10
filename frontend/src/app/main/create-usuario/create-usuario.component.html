@@ -1,6 +1,6 @@
 <app-menu></app-menu>
 <div class="container">
-
+  <form [formGroup]="this.tipoCondicionanteForm">
     <mat-card class="box">
         <mat-form-field style="width:85%">
             <mat-label>Tipo de Condicionante</mat-label>
@@ -29,7 +29,7 @@
 
           <mat-form-field style="width:85%">
             <mat-label>Descri&ccedil;&atilde;o</mat-label>
-            <textarea matInput></textarea>
+            <textarea matInput [formControl]="descricao"></textarea>
           </mat-form-field>
 
           
@@ -38,7 +38,8 @@
             <textarea matInput></textarea>
           </mat-form-field>
           <div>
-            <button mat-stroked-button color="warn">Cadastrar</button>
+            <button mat-stroked-button color="warn" (click)="this.salvar()">Cadastrar</button>
         </div>
     </mat-card>
+    </form>
 </div>
