@@ -30,11 +30,11 @@ export class LoginService extends AbstractService{
   recuperacaoSenha(email: string) {
     const body = new HttpParams()
     .set('email', email);
-    
+
     return this.http.post(
-      this.url + '/oauth/token',
+      this.url + '/login/recuperar',
       body,
       {headers: this.headers}
-    )
+    );
   }
 }

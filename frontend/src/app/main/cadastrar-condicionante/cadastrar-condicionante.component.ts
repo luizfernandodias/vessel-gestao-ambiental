@@ -3,11 +3,11 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { TipoCondicionanteService } from 'src/app/service/tipo-condicionante.service';
 
 @Component({
-  selector: 'app-create-usuario',
-  templateUrl: './create-usuario.component.html',
-  styleUrls: ['./create-usuario.component.css']
+  selector: 'app-cadastrar-condicionante',
+  templateUrl: './cadastrar-condicionante.component.html',
+  styleUrls: ['./cadastrar-condicionante.component.css']
 })
-export class CreateUsuarioComponent implements OnInit {
+export class CadastrarCondicionanteComponent implements OnInit {
 
   private tipoCondicionanteForm = this.formBuilder.group({
     'descricao': [Validators.required]

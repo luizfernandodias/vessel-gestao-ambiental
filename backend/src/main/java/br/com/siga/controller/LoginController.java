@@ -18,4 +18,10 @@ public class LoginController {
 	public ModelAndView main(){
 		return new ModelAndView("redirect:/login");
 	}
+	
+	@RequestMapping(value= {"/login/recuperar"}, method = RequestMethod.POST)
+	public ModelAndView recuperarSenha() {
+		System.out.println("Chamei o método");
+		return new ModelAndView("redirect:/login");
+	}
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CreateUsuarioComponent } from './create-usuario/create-usuario.component';
+import { CadastrarUsuarioComponent } from './cadastrar-usuario/cadastrar-usuario.component';
 import { MainRouterModule } from './main-router.module';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
@@ -21,12 +21,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CadastrarLicencaComponent } from './cadastrar-licenca/cadastrar-licenca.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { CadastrarCondicionanteComponent } from './cadastrar-condicionante/cadastrar-condicionante.component';
 
 @NgModule({
   declarations: [
-    CreateUsuarioComponent,
+    CadastrarUsuarioComponent,
     MenuComponent,
-    CadastrarLicencaComponent
+    CadastrarLicencaComponent,
+    CadastrarCondicionanteComponent
   ],
   imports: [
     CommonModule,
@@ -55,7 +57,7 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     MainRouterModule
   ],
   exports: [
-    CreateUsuarioComponent,
+    CadastrarUsuarioComponent,
     MenuComponent
   ]
 })

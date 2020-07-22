@@ -15,8 +15,8 @@ import { OAuthService } from 'angular-oauth2-oidc';
 export class LoginComponent implements OnInit {
 
   private loginForm =  this.formBuilder.group({
-    username: new FormControl('username', [Validators.required]),
-    password: new FormControl('password', [Validators.required])
+    username: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required])
   })
 
   constructor(
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    
   }
 
   login() {
