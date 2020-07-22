@@ -21,4 +21,20 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['main','cadastrar-licenca']);
   }
 
+  cadastrarUsuario() {
+    this.router.navigate(['main','cadastrar-usuario']);
+  }
+
+  cadastrarCondicionante(){
+    this.router.navigate(['main','cadastrar-condicionante']);
+  }
+
+  cadastrarTipoCondicionante(){
+     this.router.navigate(['main','cadastrar-tipo-condicionante']);
+  }
+
+  listarCondicionantes(){
+
+  }
+
 }

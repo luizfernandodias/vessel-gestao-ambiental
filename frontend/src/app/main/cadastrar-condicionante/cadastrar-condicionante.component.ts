@@ -9,12 +9,7 @@ import { TipoCondicionanteService } from 'src/app/service/tipo-condicionante.ser
 })
 export class CadastrarCondicionanteComponent implements OnInit {
 
-  private tipoCondicionanteForm = this.formBuilder.group({
-    'descricao': [Validators.required]
-  });
-
-  constructor(private formBuilder: FormBuilder,
-              private tipoCondicionanteService: TipoCondicionanteService) { 
+  constructor(private formBuilder: FormBuilder) { 
   
   }
 
@@ -23,9 +18,7 @@ export class CadastrarCondicionanteComponent implements OnInit {
   }
 
   salvar(){
-    console.log('teste');
-    let descricao = this.tipoCondicionanteForm.get('descricao').value;
-    //this.tipoCondicionanteService.salvar();
+
   }
 
 }

@@ -22,6 +22,9 @@ public class TipoCondicionanteController {
     @ResponseBody
     @Secured({DominioPapel.ROLE_CLIENTE, DominioPapel.ROLE_ADMIN})
 	public void salvar(@RequestBody TipoCondicionante tipoCondicionante) {
+		System.out.println("_______________________________________________");
+		System.out.println("Chamei o método");
+		System.out.println("_______________________________________________");
 		this.tipoCondicionanteService.salvar(tipoCondicionante);
 	}
 }

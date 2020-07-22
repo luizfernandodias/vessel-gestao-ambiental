@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { AbstractService } from './abstract.service';
 import { StorageService } from 'angular-webstorage-service';
+import { TipoCondicionante } from '../model/tipoCondicionante';
 
 @Injectable({
   providedIn: 'root'
@@ -14,14 +15,16 @@ export class TipoCondicionanteService extends AbstractService{
     super();
    }
 
-  salvar() {
-    /*const body = new HttpParams()
-    .set('acess_token', this.storage.get('access_token').value)
-    .set('token_type', this.storage.get('token_type').value )
-    .set('descricao', 'descricao');*/
+  salvar(tipoCondicionante: TipoCondicionante) {
+    const body = new HttpParams()
+    .set('descricao', tipoCondicionante.descricao)
+    .set('observacao',tipoCondicionante.descricao);
+
+    console.log(this.url + '/tipo-condicionante/salvar');
+
     return this.http.post(
       this.url + '/tipo-condicionante/salvar',
-      null,
+      body,
       {headers: this.headers}
     )
   }

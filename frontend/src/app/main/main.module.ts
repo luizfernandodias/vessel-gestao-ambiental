@@ -22,13 +22,15 @@ import { CadastrarLicencaComponent } from './cadastrar-licenca/cadastrar-licenca
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { CadastrarCondicionanteComponent } from './cadastrar-condicionante/cadastrar-condicionante.component';
+import { CadastrarTipoCondicionanteComponent } from './cadastrar-tipo-condicionante/cadastrar-tipo-condicionante.component';
 
 @NgModule({
   declarations: [
     CadastrarUsuarioComponent,
     MenuComponent,
     CadastrarLicencaComponent,
-    CadastrarCondicionanteComponent
+    CadastrarCondicionanteComponent,
+    CadastrarTipoCondicionanteComponent
   ],
   imports: [
     CommonModule,
@@ -58,6 +60,7 @@ import { CadastrarCondicionanteComponent } from './cadastrar-condicionante/cadas
   ],
   exports: [
     CadastrarUsuarioComponent,
+    CadastrarTipoCondicionanteComponent,
     MenuComponent
   ]
 })

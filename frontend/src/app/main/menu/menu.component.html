@@ -15,13 +15,14 @@
       Administrativo
     </button>
     <mat-menu #menu="matMenu" #administrativo>
-      <button mat-menu-item>Cadastrar Usu&aacute;rio</button>
+      <button mat-menu-item (click)="this.cdastrarUsuario()">Cadastrar Usu&aacute;rio</button>
       <button mat-menu-item>Listar Usu&aacute;rio</button>
     </mat-menu>
     <button [matMenuTriggerFor]="condicionante" mat-menu-item>Condicionantes</button>
     <mat-menu #menu="matMenu" #condicionante>
-      <button mat-menu-item>Cadastrar Condicionante</button>
-      <button mat-menu-item>Listar Condicionante</button>
+      <button mat-menu-item (click)="this.cadastrarCondicionante()">Cadastrar Condicionante</button>
+      <button mat-menu-item (click)="this.listarCondicionantes()">Listar Condicionante</button>
+      <button mat-menu-item (click)="this.cadastrarTipoCondicionante()">Cadastrar Tipo de Condicionante</button>
     </mat-menu>
     <button [matMenuTriggerFor]="ajuda" mat-menu-item>
       Ajuda

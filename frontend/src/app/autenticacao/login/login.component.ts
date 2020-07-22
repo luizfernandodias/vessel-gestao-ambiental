@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
       this.storage.storeOnLocalStorage('token_type', result['token_type']);
       this.storage.storeOnLocalStorage('refresh_token', result['refresh_token']);
      
-      this.router.navigate(['main', 'create-usuario']);
+      this.router.navigate(['main', 'cadastrar-usuario']);
 
     }).catch((error) => {
         this.snackBar.open('Usuario ou senha incorretos', 'error', {
