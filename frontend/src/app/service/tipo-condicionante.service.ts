@@ -20,13 +20,11 @@ export class TipoCondicionanteService extends AbstractService{
     .set('descricao', tipoCondicionante.descricao)
     .set('observacao',tipoCondicionante.descricao);
 
-    console.log(this.url + '/tipo-condicionante/salvar');
-
     return this.http.post(
       this.url + '/tipo-condicionante/salvar',
       body,
       {headers: this.headers}
-    )
+    );
   }
 
 }
