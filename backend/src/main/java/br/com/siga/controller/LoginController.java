@@ -19,9 +19,8 @@ public class LoginController {
 		return new ModelAndView("redirect:/login");
 	}
 	
-	@RequestMapping(value= {"/login/recuperar"}, method = RequestMethod.POST)
+	@RequestMapping(value= {"/login"}, method = RequestMethod.POST)
 	public ModelAndView recuperarSenha() {
-		System.out.println("Chamei o método");
 		return new ModelAndView("redirect:/login");
 	}
 }
