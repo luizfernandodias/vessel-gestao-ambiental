@@ -8,5 +8,5 @@ import br.com.siga.entity.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
 
-	Usuario findByLogin(String login);
+	Usuario findByUsuario(String usuario);
 }

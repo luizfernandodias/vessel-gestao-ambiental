@@ -15,7 +15,7 @@ public class UsuarioDetails implements UserDetails {
 	private static final long serialVersionUID = 1L;
 	private int id;
 	private List<Papel> papeis;	
-	private String login;
+	private String usuario;
 	private String senha;
 	private Boolean habilitado;
 	private Date dataCriacao;
@@ -24,7 +24,7 @@ public class UsuarioDetails implements UserDetails {
 	public UsuarioDetails(Usuario usuario) {
 		this.id = usuario.getId();
 		this.papeis = usuario.getPapeis();
-		this.login = usuario.getLogin();
+		this.usuario = usuario.getUsuario();
 		this.senha = usuario.getSenha();
 		this.habilitado = usuario.getHabilitado();
 		this.dataCriacao = usuario.getDataCriacao();
@@ -35,8 +35,9 @@ public class UsuarioDetails implements UserDetails {
 		return this.papeis;
 	}
 
-	public String getLogin() {
-        return this.login;
+	@Override
+    public String getUsername() {
+        return this.usuario;
     }
 
     @Override
@@ -80,6 +81,13 @@ public class UsuarioDetails implements UserDetails {
 		this.papeis = papeis;
 	}
 
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
 
 	public String getSenha() {
 		return senha;
@@ -104,14 +112,6 @@ public class UsuarioDetails implements UserDetails {
 	public void setDataCriacao(Date dataCriacao) {
 		this.dataCriacao = dataCriacao;
 	}
-
-	@Override
-	public String getUsername() {
-		return this.login;
-	}
-	
-	public void setUsername(String username) {
-		this.login = username;
-	}
-        
+    
+    
 }
