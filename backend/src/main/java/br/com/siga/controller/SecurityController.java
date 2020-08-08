@@ -12,7 +12,7 @@ import br.com.siga.entity.Usuario;
 @Controller
 public class SecurityController {
 
-    @RequestMapping(value = "/user-auth", method = RequestMethod.POST)
+    @RequestMapping(value = "/user-auth", method = RequestMethod.GET)
     @ResponseBody
     @Secured({DominioPapel.ROLE_CLIENTE, DominioPapel.ROLE_ADMIN})
     public Usuario user() {
