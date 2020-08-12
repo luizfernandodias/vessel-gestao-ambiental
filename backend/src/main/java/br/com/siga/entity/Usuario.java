@@ -27,8 +27,8 @@ public class Usuario {
     @JoinTable(name="usuarioPapel", joinColumns=@JoinColumn(name="usuarioID"), inverseJoinColumns=@JoinColumn(name="papelID"))
 	private List<Papel> papeis;	
 	
-	@Column(name="usuario", nullable = false, unique = true, length= 75)
-	private String usuario;
+	@Column(name="login", nullable = false, unique = true, length= 75)
+	private String login;
 	
 	@Column(name="senha", length = 150)
 	private String senha;
@@ -48,7 +48,7 @@ public class Usuario {
 		super();
 		this.setDataCriacao(usuario.getDataCriacao());
 		this.setHabilitado(usuario.getHabilitado());
-		this.setUsuario(usuario.getUsuario());
+		this.setLogin(usuario.getLogin());
 		this.setSenha(usuario.getSenha());
 		this.setPapeis(usuario.getPapeis());
 		this.setId(usuario.getId());	
@@ -71,12 +71,12 @@ public class Usuario {
 		this.papeis = papeis;
 	}
 
-	public String getUsuario() {
-		return usuario;
+	public String getLogin() {
+		return login;
 	}
 
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
+	public void setLogin(String login) {
+		this.login = login;
 	}
 
 	public String getSenha() {
