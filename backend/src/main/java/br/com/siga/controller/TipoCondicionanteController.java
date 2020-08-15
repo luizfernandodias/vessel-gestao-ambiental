@@ -1,6 +1,7 @@
 package br.com.siga.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,12 +13,13 @@ import br.com.siga.entity.TipoCondicionante;
 import br.com.siga.repository.TipoCondicionanteRepository;
 
 @Controller
+@RequestMapping("/tipo-condicionante")
 public class TipoCondicionanteController {
 	
 	@Autowired
 	private TipoCondicionanteRepository tipoCondicionanteRepository;
 	
-	@RequestMapping(value = "/tipo-condicionante/salvar", method = RequestMethod.POST)
+	@RequestMapping(value = "/salvar", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
     @Secured({DominioPapel.ROLE_CLIENTE, DominioPapel.ROLE_ADMIN})
 	public void salvar(@RequestBody TipoCondicionante tipoCondicionante) {

@@ -14,7 +14,8 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableResourceServer
 @EnableAutoConfiguration
 @EntityScan(basePackages = {"br.com.siga.entity"})
-@ComponentScan(basePackages = {"br.com.siga.components","br.com.siga.service","br.com.siga.config"})
+@ComponentScan(basePackages = {"br.com.siga.components","br.com.siga.service","br.com.siga.config",
+		"br.com.siga.controller"})
 @EnableJpaRepositories(basePackages = {"br.com.siga.repository"})
 public class SigaApplication {
 
