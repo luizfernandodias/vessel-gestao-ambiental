@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import br.com.siga.details.UsuarioDetails;
 import br.com.siga.entity.Usuario;
 import br.com.siga.repository.UsuarioRepository;
@@ -34,9 +35,11 @@ public class WebSecurityConfigAdapter extends WebSecurityConfigurerAdapter {
         builder.userDetailsService(login -> new UsuarioDetails(usuarioRepository.findByLogin(login)))
                 .passwordEncoder(passwordEncoder());
     }
+    
 
     @Bean
     public static BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+   
 }

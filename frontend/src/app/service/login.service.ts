@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AbstractService } from './abstract.service';
 import { HttpHeaders, HttpClient, HttpParams } from '@angular/common/http';
+import { StorageService } from './storage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +9,10 @@ import { HttpHeaders, HttpClient, HttpParams } from '@angular/common/http';
 export class LoginService extends AbstractService{
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    public storage: StorageService
   ) {
-    super();
+    super(storage);
    }
 
 

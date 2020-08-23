@@ -40,7 +40,8 @@ export class LoginComponent implements OnInit {
       this.storage.storeOnLocalStorage('access_token', result['access_token']);
       this.storage.storeOnLocalStorage('token_type', result['token_type']);
       this.storage.storeOnLocalStorage('refresh_token', result['refresh_token']);
-     
+      this.storage.storeOnLocalStorage('username', this.loginForm.get('username').value)
+      this.storage.storeOnLocalStorage('password', this.loginForm.get('password').value)
       this.router.navigate(['main', 'cadastrar-usuario']);
 
     }).catch((error) => {
