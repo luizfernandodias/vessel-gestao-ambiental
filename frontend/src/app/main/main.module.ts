@@ -24,6 +24,8 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { CadastrarCondicionanteComponent } from './cadastrar-condicionante/cadastrar-condicionante.component';
 import { CadastrarTipoCondicionanteComponent } from './cadastrar-tipo-condicionante/cadastrar-tipo-condicionante.component';
 import { SobreOSigaComponent } from './sobre-o-siga/sobre-o-siga.component';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
@@ -55,10 +57,12 @@ import { SobreOSigaComponent } from './sobre-o-siga/sobre-o-siga.component';
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
-    CKEditorModule
+    CKEditorModule,
+    ToastrModule.forRoot()
   ],
   providers: [
-    MainRouterModule
+    MainRouterModule,
+    ToastrService
   ],
   exports: [
     CadastrarUsuarioComponent,

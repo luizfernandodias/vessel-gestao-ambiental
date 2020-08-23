@@ -2,40 +2,10 @@
 <div class="container">
   <form [formGroup]="this.tipoCondicionanteForm">
     <mat-card class="box">
-        <mat-form-field style="width:85%">
-            <mat-label>Tipo de Condicionante</mat-label>
-            <mat-select>
-              <mat-option>
-                Tipo de Condicionante 1
-              </mat-option>
-              
-              <mat-option>
-                Tipo de Condicionante 2
-              </mat-option>
-              
-              <mat-option>
-                Tipo de Condicionante 3
-              </mat-option>
-              
-              <mat-option>
-                Tipo de Condicionante 4
-              </mat-option>
-              
-              <mat-option>
-                Tipo de Condicionante 5
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-
+      <h3>Cadastrar Tipo de condicionante</h3>
           <mat-form-field style="width:85%">
             <mat-label>Descri&ccedil;&atilde;o</mat-label>
             <textarea matInput formControlName="descricao"></textarea>
-          </mat-form-field>
-
-          
-          <mat-form-field style="width:85%">
-            <mat-label>Observa&ccedil;&atilde;o</mat-label>
-            <textarea matInput formControlName="observacao"></textarea>
           </mat-form-field>
           <div>
             <button mat-stroked-button color="warn" (click)="this.salvar()">Cadastrar</button>
