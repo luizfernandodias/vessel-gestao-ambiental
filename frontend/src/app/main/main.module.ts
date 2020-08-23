@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { CadastrarCondicionanteComponent } from './cadastrar-condicionante/cadastrar-condicionante.component';
 import { CadastrarTipoCondicionanteComponent } from './cadastrar-tipo-condicionante/cadastrar-tipo-condicionante.component';
+import { SobreOSigaComponent } from './sobre-o-siga/sobre-o-siga.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CadastrarTipoCondicionanteComponent } from './cadastrar-tipo-condiciona
     MenuComponent,
     CadastrarLicencaComponent,
     CadastrarCondicionanteComponent,
-    CadastrarTipoCondicionanteComponent
+    CadastrarTipoCondicionanteComponent,
+    SobreOSigaComponent
   ],
   imports: [
     CommonModule,

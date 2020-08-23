@@ -30,7 +30,6 @@ export class CadastrarTipoCondicionanteComponent implements OnInit {
     let tipoCondicionante = new TipoCondicionante();
     tipoCondicionante.observacao = this.tipoCondicionanteForm.get('observacao').value;
     tipoCondicionante.descricao  = this.tipoCondicionanteForm.get('descricao').value;
-    console.log('chamei o método');
     this.tipoCondicionanteService.salvar(tipoCondicionante);
   }
 

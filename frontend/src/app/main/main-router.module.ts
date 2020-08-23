@@ -4,6 +4,7 @@ import { CadastrarUsuarioComponent } from './cadastrar-usuario/cadastrar-usuario
 import { CadastrarLicencaComponent } from './cadastrar-licenca/cadastrar-licenca.component';
 import { CadastrarCondicionanteComponent } from './cadastrar-condicionante/cadastrar-condicionante.component';
 import { CadastrarTipoCondicionanteComponent } from './cadastrar-tipo-condicionante/cadastrar-tipo-condicionante.component';
+import { SobreOSigaComponent } from './sobre-o-siga/sobre-o-siga.component';
 
 export const routes: Routes = [{
   path: 'main',
@@ -23,6 +24,10 @@ export const routes: Routes = [{
     {
       path: 'cadastrar-tipo-condicionante',
       component: CadastrarTipoCondicionanteComponent
+    },
+    {
+      path: 'sobre-o-siga',
+      component: SobreOSigaComponent
     }
   ]
 }]

@@ -28,8 +28,8 @@
       Ajuda
     </button>
     <mat-menu #menu="matMenu" #ajuda>
-      <button mat-menu-item>Sobre o Siga</button>
-      <button mat-menu-item>Sair</button>
+      <button mat-menu-item (click)="this.sobreOSiga()">Sobre o Siga</button>
+      <button mat-menu-item (click)="this.sair()">Sair</button>
     </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>

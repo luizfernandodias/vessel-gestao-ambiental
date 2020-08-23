@@ -33,6 +33,14 @@ export class MenuComponent implements OnInit {
      this.router.navigate(['main','cadastrar-tipo-condicionante']);
   }
 
+  sair(){
+    this.router.navigate(['autenticacao','login']);
+  }
+
+  sobreOSiga(){
+    this.router.navigate(['main','sobre-o-siga']);
+  }
+
   listarCondicionantes(){
 
   }
