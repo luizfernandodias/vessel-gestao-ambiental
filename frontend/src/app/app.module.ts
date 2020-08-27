@@ -10,8 +10,7 @@ import { MainModule } from './main/main.module';
 import { RouterModule } from '@angular/router';
 import { MatIconModule, MatToolbarModule, MatMenuModule } from '@angular/material';
 import { OAuthService, UrlHelperService, OAuthLogger, OAuthModule } from 'angular-oauth2-oidc';
-import { OverlayModule } from '@angular/cdk/overlay';
-
+import { ToastrService } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -28,11 +27,11 @@ import { OverlayModule } from '@angular/cdk/overlay';
     MatIconModule,
     MatToolbarModule,
     MatMenuModule,
-    OAuthModule.forRoot(),
-    OverlayModule
+    OAuthModule.forRoot()
   ],
   providers: [
     HttpClientModule,
+    ToastrService,
     FormBuilder,
     Storage,
     OAuthService,

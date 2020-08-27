@@ -25,7 +25,6 @@ import { CadastrarCondicionanteComponent } from './cadastrar-condicionante/cadas
 import { CadastrarTipoCondicionanteComponent } from './cadastrar-tipo-condicionante/cadastrar-tipo-condicionante.component';
 import { SobreOSigaComponent } from './sobre-o-siga/sobre-o-siga.component';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
-import { OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
@@ -61,8 +60,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
     ToastrModule.forRoot()
   ],
   providers: [
-    MainRouterModule,
-    ToastrService
+    MainRouterModule
   ],
   exports: [
     CadastrarUsuarioComponent,
