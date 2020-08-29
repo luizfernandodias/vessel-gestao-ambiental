@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormControl } from '@angular/forms';
 import { TipoCondicionanteService } from 'src/app/service/tipo-condicionante.service';
 import { TipoCondicionante } from 'src/app/model/tipoCondicionante';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-cadastrar-tipo-condicionante',
@@ -18,8 +17,7 @@ export class CadastrarTipoCondicionanteComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private tipoCondicionanteService: TipoCondicionanteService,
-    private toastService: ToastrService
+    private tipoCondicionanteService: TipoCondicionanteService
     ) { 
   
   }
@@ -32,8 +30,9 @@ export class CadastrarTipoCondicionanteComponent implements OnInit {
     let tipoCondicionante = new TipoCondicionante();
     tipoCondicionante.observacao = this.tipoCondicionanteForm.get('observacao').value;
     tipoCondicionante.descricao  = this.tipoCondicionanteForm.get('descricao').value;
-    this.tipoCondicionanteService.salvar(tipoCondicionante);
-    this.toastService.success('Tipo de condicionante inserido com sucesso!');
+    this.tipoCondicionanteService.salvar(tipoCondicionante).toPromise().then((result)=>{
+      
+    });
   }
 
 }

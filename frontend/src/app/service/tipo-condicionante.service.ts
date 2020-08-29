@@ -22,6 +22,8 @@ export class TipoCondicionanteService extends AbstractService{
     .set('username', this.storage.getFromLocalStorage('username'))
     .set('password', this.storage.getFromLocalStorage('password'));
 
+    console.log('chamando a função');
+
     return this.http.post(
       this.url + '/tipo-condicionante/salvar',
       body,

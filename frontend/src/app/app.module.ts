@@ -10,7 +10,7 @@ import { MainModule } from './main/main.module';
 import { RouterModule } from '@angular/router';
 import { MatIconModule, MatToolbarModule, MatMenuModule } from '@angular/material';
 import { OAuthService, UrlHelperService, OAuthLogger, OAuthModule } from 'angular-oauth2-oidc';
-import { ToastrService } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +31,6 @@ import { ToastrService } from 'ngx-toastr';
   ],
   providers: [
     HttpClientModule,
-    ToastrService,
     FormBuilder,
     Storage,
     OAuthService,
