@@ -14,7 +14,7 @@ public class TipoCondicionante {
 	@Column(name="id", updatable = false, nullable = false)
 	private Integer id;
 	
-	@Column(name="descricao", nullable = false, unique = true, length= 200)
+	@Column(name="descricao", length= 200)
 	private String descricao;
 	
 	public Integer getId() {

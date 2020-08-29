@@ -22,9 +22,12 @@ export class AbstractService {
     
   }
 
-  getAccessToken(){
+  getDefaultHeaders(){
     let tokenHttpHeaders =  new HttpHeaders({
-      Authorization : 'Bearer ' + this.storage.getFromLocalStorage('access_token')
+      Authorization : 'Bearer ' + this.storage.getFromLocalStorage('access_token'),
+      'Content-Type': 'application/json',
+       username: this.storage.getFromLocalStorage('username'),
+       password: this.storage.getFromLocalStorage('password')
     });
     return tokenHttpHeaders;
   }
